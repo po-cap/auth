@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Qf4tGoSMULI=",
+  "success": true,
+  "projectFilePath": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/Auth.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/supojen/.nuget/packages/po.api.response/1.0.0/po.api.response.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

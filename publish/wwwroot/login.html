@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小紅帽</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+        body {
+            font-family: 'LXGWWenKaiTC',serif;
+            background-color: #fff8f6;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #5d403700;
+            padding: 20px 30px;
+            border-radius: 8px;
+            width: 33%;
+            margin: 10% auto 0px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #501b0b;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 70px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #501b0b;
+            text-align: right;
+        }
+        input {
+            display: inline-block;
+            width: calc(100% - 80px);
+            padding: 8px;
+            border: none;
+            border-bottom: 2px solid #e2d1cc;
+            background: #fff8f6;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none; /* 紅色輪廓，2px寬 */
+            border-bottom: 2px solid #d4c3be;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f1dfda;
+            color: #000000;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'LXGWWenKaiTC',serif;
+        }
+        button:hover {
+            background-color: #d4c3be;
+        }
+        .error {
+            color: #600004;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #4CAF50;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .border-divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        /* 平板設備 */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            body {
+                position: relative;
+            }
+            .login-container {
+                width: 85%;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h2 {
+                font-size: 5em;
+                margin-bottom: 5%;
+            }
+            .form-group {
+                margin-bottom: 50px;
+            }
+            label {
+                width: 25%;
+                font-size: 2.6em;
+            }
+            input {
+                width: calc(100% - 26%);
+                font-size: 2.6em;
+            }
+            button {
+                font-size: 2.6em;
+                border-radius: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- UI 部分 -->
+    <div class="login-container">
+        <h2>小紅帽資訊</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">電子郵件:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密碼:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">確認</button>
+            <div id="errorMessage" class="error"></div>
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>登入中，請稍候...</p>
+            </div>
+        </form>
+
+        <!-- 分割線 -->
+        <div class="border-divider"></div>
+        
+        <!-- LINE 登录按钮 -->
+        <button class="line-login" id="lineLogin">
+            <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
+                 alt="LINE登录"
+                 style="height: 24px; vertical-align: middle; margin-right: 8px;">
+            使用 LINE 登录
+        </button>
+    </div>
+
+    <!-- Submit 邏輯 -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // 顯示 loading icon
+            document.getElementById('loading').style.display = 'block';
+            
+            // 取得使用者輸入的數據(電子郵件和密碼)
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password,
+                    })
+                });
+
+                if (response.ok) {
+                    // 從URL獲取redirectUrl參數
+                    const urlParams = new URLSearchParams(window.location.search);
+                    
+                    // 重定向到指定URL
+                    window.location.href = urlParams.get('redirectUri');
+                } else {
+                    const errorData = await response.json();
+                    document.getElementById('errorMessage').textContent = errorData.message || '登錄失敗';
+                }
+            } catch (error) {
+                document.getElementById('errorMessage').textContent = '發生錯誤，請重試';
+                console.error('Error:', error);
+            }
+
+            // 隱藏 loading icon
+            document.getElementById('loading').style.display = 'none';
+        });
+
+
+        document.getElementById('lineLogin').addEventListener('click', function() {
+            window.location.href = 'https://localhost:5005/line'
+        });
+    </script>
+</body>
+</html>

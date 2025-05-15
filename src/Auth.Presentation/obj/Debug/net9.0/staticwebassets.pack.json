@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf",
+      "PackagePath": "staticwebassets/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf"
+    },
+    {
+      "Id": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf",
+      "PackagePath": "staticwebassets/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf"
+    },
+    {
+      "Id": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf",
+      "PackagePath": "staticwebassets/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf"
+    },
+    {
+      "Id": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt",
+      "PackagePath": "staticwebassets/fonts/LXGW_WenKai_TC/OFL.txt"
+    },
+    {
+      "Id": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css",
+      "PackagePath": "staticwebassets/main.css"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.Auth.Presentation.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.Auth.Presentation.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.Auth.Presentation.props",
+      "PackagePath": "build\\Auth.Presentation.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.Auth.Presentation.props",
+      "PackagePath": "buildMultiTargeting\\Auth.Presentation.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.Auth.Presentation.props",
+      "PackagePath": "buildTransitive\\Auth.Presentation.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

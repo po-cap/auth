@@ -1,0 +1,12 @@
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/bin/Release/net9.0/Auth.Domain.deps.json
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/bin/Release/net9.0/Auth.Domain.dll
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/bin/Release/net9.0/Auth.Domain.pdb
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/Auth.Domain.csproj.AssemblyReference.cache
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/Auth.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/Auth.Domain.AssemblyInfoInputs.cache
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/Auth.Domain.AssemblyInfo.cs
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/Auth.Domain.csproj.CoreCompileInputs.cache
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/Auth.Domain.dll
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/refint/Auth.Domain.dll
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/Auth.Domain.pdb
+/Users/supojen/2025/Product/Servers/Auth/src/Auth.Domain/obj/Release/net9.0/ref/Auth.Domain.dll

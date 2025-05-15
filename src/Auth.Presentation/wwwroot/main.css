@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'LXGWWenKaiTC';
+    src: url('./fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LXGWWenKaiTC';
+    src: url('./fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LXGWWenKaiTC';
+    src: url('./fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

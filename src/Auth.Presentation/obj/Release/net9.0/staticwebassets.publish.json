@@ -1,0 +1,2639 @@
+{
+  "Version": 1,
+  "Hash": "LPzVibU1zUklzPHmpkVbIquh5Jz0q12O8IF8kAUKK60=",
+  "Source": "Auth.Presentation",
+  "BasePath": "_content/Auth.Presentation",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Auth.Presentation/wwwroot",
+      "Source": "Auth.Presentation",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/a9mehw14ac-rexyp90hpf.gz",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "main#[.{fingerprint=rexyp90hpf}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "v9inmfi7hz",
+      "Integrity": "Qw5E10e75bgu+wYYfDTyHPx4cSTj/0mweIOY/bjMqKM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/ei2wif4a87-5vo0z2n9ps.gz",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "fonts/LXGW_WenKai_TC/OFL#[.{fingerprint=5vo0z2n9ps}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "lyrxwu2kcl",
+      "Integrity": "M3zZIe74/pHptqpcWbWhOSnfwBqO6dDBm9r/JafxEDU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/gofau20t6m-j9u5v3h7p2.gz",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "login#[.{fingerprint=j9u5v3h7p2}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/login.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "wzj18rj92c",
+      "Integrity": "fN990ORHTxhLz0rjaYTsZvGKQAEz6tzbGqkokM6Ez/A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/login.html"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/a9mehw14ac-rexyp90hpf.br",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "main#[.{fingerprint=rexyp90hpf}]?.css.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "6srpqmki3q",
+      "Integrity": "GnWAokeb+9zXqT7xmaKeuntv9NsxMoK3U6BcAVBoFbI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/ei2wif4a87-5vo0z2n9ps.br",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "fonts/LXGW_WenKai_TC/OFL#[.{fingerprint=5vo0z2n9ps}]?.txt.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "qji9xccalt",
+      "Integrity": "2ogfff18a6yc5cBRFC3va44uBT6Ow5zNsmZvRiLsQac=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/gofau20t6m-j9u5v3h7p2.br",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "login#[.{fingerprint=j9u5v3h7p2}]?.html.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/login.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "hhnv08z4id",
+      "Integrity": "WyfmwIXRhcPxD3CiN5DfL8Qm7Nx7PMMX5olNbfeZBJk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/login.html"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/r01pqvlcc8-ow61j1chr0.br",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "favicon#[.{fingerprint=ow61j1chr0}]?.ico.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "qoik9uoqac",
+      "Integrity": "ZoPlgSa07NmEY3XuDdnM9twI5tR/FLR+Ylzmz6QC0KE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/r01pqvlcc8-ow61j1chr0.gz",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "favicon#[.{fingerprint=ow61j1chr0}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "0szc2se2sk",
+      "Integrity": "4C1e8e3FmqXthrtefvBHX0s7i7kqZa8yjeu5nQWKzJU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ow61j1chr0",
+      "Integrity": "yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o3togt29af",
+      "Integrity": "VK2kWKAotWxSWMMJTYYXqsE35nRg6QKyo9Jf0tZzCdE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f371gcs6ti",
+      "Integrity": "1SX1pd7Vi9ulznpAonUmqFa8PXtPqyjnvABAmS2yGcA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "35w81opdom",
+      "Integrity": "SdoewR8IxmD20DyWox7EsQKuDH/GJmdk+yQwTQ38CW4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "fonts/LXGW_WenKai_TC/OFL#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5vo0z2n9ps",
+      "Integrity": "H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/fonts/LXGW_WenKai_TC/OFL.txt"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/login.html",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j9u5v3h7p2",
+      "Integrity": "iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/login.html"
+    },
+    {
+      "Identity": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css",
+      "SourceId": "Auth.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/",
+      "BasePath": "_content/Auth.Presentation",
+      "RelativePath": "main#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rexyp90hpf",
+      "Integrity": "o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/main.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/r01pqvlcc8-ow61j1chr0.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.011494252874"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoPlgSa07NmEY3XuDdnM9twI5tR/FLR+Ylzmz6QC0KE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/r01pqvlcc8-ow61j1chr0.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.008928571429"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4C1e8e3FmqXthrtefvBHX0s7i7kqZa8yjeu5nQWKzJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "318"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/r01pqvlcc8-ow61j1chr0.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoPlgSa07NmEY3XuDdnM9twI5tR/FLR+Ylzmz6QC0KE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZoPlgSa07NmEY3XuDdnM9twI5tR/FLR+Ylzmz6QC0KE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/r01pqvlcc8-ow61j1chr0.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4C1e8e3FmqXthrtefvBHX0s7i7kqZa8yjeu5nQWKzJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4C1e8e3FmqXthrtefvBHX0s7i7kqZa8yjeu5nQWKzJU="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ow61j1chr0.ico",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/r01pqvlcc8-ow61j1chr0.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.011494252874"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoPlgSa07NmEY3XuDdnM9twI5tR/FLR+Ylzmz6QC0KE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow61j1chr0"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ow61j1chr0.ico",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/r01pqvlcc8-ow61j1chr0.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.008928571429"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4C1e8e3FmqXthrtefvBHX0s7i7kqZa8yjeu5nQWKzJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow61j1chr0"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ow61j1chr0.ico",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "318"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow61j1chr0"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yI+bSfrW3kfOh8CwyYpZDYdsEea3YN2Euve7m9RIEy4="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ow61j1chr0.ico.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/r01pqvlcc8-ow61j1chr0.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZoPlgSa07NmEY3XuDdnM9twI5tR/FLR+Ylzmz6QC0KE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow61j1chr0"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZoPlgSa07NmEY3XuDdnM9twI5tR/FLR+Ylzmz6QC0KE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ow61j1chr0.ico.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/r01pqvlcc8-ow61j1chr0.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4C1e8e3FmqXthrtefvBHX0s7i7kqZa8yjeu5nQWKzJU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 30 Apr 2025 13:14:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ow61j1chr0"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4C1e8e3FmqXthrtefvBHX0s7i7kqZa8yjeu5nQWKzJU="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.o3togt29af.ttf",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12879676"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VK2kWKAotWxSWMMJTYYXqsE35nRg6QKyo9Jf0tZzCdE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o3togt29af"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VK2kWKAotWxSWMMJTYYXqsE35nRg6QKyo9Jf0tZzCdE="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Bold.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12879676"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VK2kWKAotWxSWMMJTYYXqsE35nRg6QKyo9Jf0tZzCdE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VK2kWKAotWxSWMMJTYYXqsE35nRg6QKyo9Jf0tZzCdE="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.f371gcs6ti.ttf",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13767052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1SX1pd7Vi9ulznpAonUmqFa8PXtPqyjnvABAmS2yGcA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f371gcs6ti"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1SX1pd7Vi9ulznpAonUmqFa8PXtPqyjnvABAmS2yGcA="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Light.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13767052"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1SX1pd7Vi9ulznpAonUmqFa8PXtPqyjnvABAmS2yGcA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1SX1pd7Vi9ulznpAonUmqFa8PXtPqyjnvABAmS2yGcA="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.35w81opdom.ttf",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13109140"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SdoewR8IxmD20DyWox7EsQKuDH/GJmdk+yQwTQ38CW4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "35w81opdom"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SdoewR8IxmD20DyWox7EsQKuDH/GJmdk+yQwTQ38CW4="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/LXGWWenKaiTC-Regular.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13109140"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SdoewR8IxmD20DyWox7EsQKuDH/GJmdk+yQwTQ38CW4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SdoewR8IxmD20DyWox7EsQKuDH/GJmdk+yQwTQ38CW4="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.5vo0z2n9ps.txt",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/ei2wif4a87-5vo0z2n9ps.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000494071146"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2023"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M3zZIe74/pHptqpcWbWhOSnfwBqO6dDBm9r/JafxEDU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5vo0z2n9ps"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/OFL.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.5vo0z2n9ps.txt",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/ei2wif4a87-5vo0z2n9ps.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000691562932"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1445"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ogfff18a6yc5cBRFC3va44uBT6Ow5zNsmZvRiLsQac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5vo0z2n9ps"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/OFL.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.5vo0z2n9ps.txt",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4483"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5vo0z2n9ps"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/OFL.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.5vo0z2n9ps.txt.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/ei2wif4a87-5vo0z2n9ps.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1445"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ogfff18a6yc5cBRFC3va44uBT6Ow5zNsmZvRiLsQac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5vo0z2n9ps"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/OFL.txt.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ogfff18a6yc5cBRFC3va44uBT6Ow5zNsmZvRiLsQac="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.5vo0z2n9ps.txt.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/ei2wif4a87-5vo0z2n9ps.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2023"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M3zZIe74/pHptqpcWbWhOSnfwBqO6dDBm9r/JafxEDU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5vo0z2n9ps"
+        },
+        {
+          "Name": "label",
+          "Value": "fonts/LXGW_WenKai_TC/OFL.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M3zZIe74/pHptqpcWbWhOSnfwBqO6dDBm9r/JafxEDU="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.txt",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/ei2wif4a87-5vo0z2n9ps.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000494071146"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2023"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M3zZIe74/pHptqpcWbWhOSnfwBqO6dDBm9r/JafxEDU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.txt",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/ei2wif4a87-5vo0z2n9ps.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000691562932"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1445"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ogfff18a6yc5cBRFC3va44uBT6Ow5zNsmZvRiLsQac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.txt",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/fonts/LXGW_WenKai_TC/OFL.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4483"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H4dlaRFZRxSlj+MCVRRIWjJEpiwkLXcSFk1AOHJ4L9Q="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.txt.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/ei2wif4a87-5vo0z2n9ps.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1445"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2ogfff18a6yc5cBRFC3va44uBT6Ow5zNsmZvRiLsQac=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2ogfff18a6yc5cBRFC3va44uBT6Ow5zNsmZvRiLsQac="
+        }
+      ]
+    },
+    {
+      "Route": "fonts/LXGW_WenKai_TC/OFL.txt.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/ei2wif4a87-5vo0z2n9ps.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2023"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M3zZIe74/pHptqpcWbWhOSnfwBqO6dDBm9r/JafxEDU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:07:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M3zZIe74/pHptqpcWbWhOSnfwBqO6dDBm9r/JafxEDU="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/gofau20t6m-j9u5v3h7p2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000470588235"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2124"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fN990ORHTxhLz0rjaYTsZvGKQAEz6tzbGqkokM6Ez/A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/gofau20t6m-j9u5v3h7p2.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000628930818"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1589"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WyfmwIXRhcPxD3CiN5DfL8Qm7Nx7PMMX5olNbfeZBJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0="
+        }
+      ]
+    },
+    {
+      "Route": "login.html.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/gofau20t6m-j9u5v3h7p2.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WyfmwIXRhcPxD3CiN5DfL8Qm7Nx7PMMX5olNbfeZBJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WyfmwIXRhcPxD3CiN5DfL8Qm7Nx7PMMX5olNbfeZBJk="
+        }
+      ]
+    },
+    {
+      "Route": "login.html.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/gofau20t6m-j9u5v3h7p2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fN990ORHTxhLz0rjaYTsZvGKQAEz6tzbGqkokM6Ez/A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fN990ORHTxhLz0rjaYTsZvGKQAEz6tzbGqkokM6Ez/A="
+        }
+      ]
+    },
+    {
+      "Route": "login.j9u5v3h7p2.html",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/gofau20t6m-j9u5v3h7p2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000470588235"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2124"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fN990ORHTxhLz0rjaYTsZvGKQAEz6tzbGqkokM6Ez/A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j9u5v3h7p2"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0="
+        }
+      ]
+    },
+    {
+      "Route": "login.j9u5v3h7p2.html",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/gofau20t6m-j9u5v3h7p2.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000628930818"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1589"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WyfmwIXRhcPxD3CiN5DfL8Qm7Nx7PMMX5olNbfeZBJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j9u5v3h7p2"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0="
+        }
+      ]
+    },
+    {
+      "Route": "login.j9u5v3h7p2.html",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6442"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j9u5v3h7p2"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iZzMC5jil9KvwYZ/TOeF9jxWlWV896hjcd72gnQnNu0="
+        }
+      ]
+    },
+    {
+      "Route": "login.j9u5v3h7p2.html.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/gofau20t6m-j9u5v3h7p2.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WyfmwIXRhcPxD3CiN5DfL8Qm7Nx7PMMX5olNbfeZBJk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j9u5v3h7p2"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WyfmwIXRhcPxD3CiN5DfL8Qm7Nx7PMMX5olNbfeZBJk="
+        }
+      ]
+    },
+    {
+      "Route": "login.j9u5v3h7p2.html.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/gofau20t6m-j9u5v3h7p2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fN990ORHTxhLz0rjaYTsZvGKQAEz6tzbGqkokM6Ez/A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:11:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j9u5v3h7p2"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fN990ORHTxhLz0rjaYTsZvGKQAEz6tzbGqkokM6Ez/A="
+        }
+      ]
+    },
+    {
+      "Route": "main.css",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/a9mehw14ac-rexyp90hpf.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005128205128"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qw5E10e75bgu+wYYfDTyHPx4cSTj/0mweIOY/bjMqKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0="
+        }
+      ]
+    },
+    {
+      "Route": "main.css",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/a9mehw14ac-rexyp90hpf.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.005988023952"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GnWAokeb+9zXqT7xmaKeuntv9NsxMoK3U6BcAVBoFbI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0="
+        }
+      ]
+    },
+    {
+      "Route": "main.css",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "607"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0="
+        }
+      ]
+    },
+    {
+      "Route": "main.css.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/a9mehw14ac-rexyp90hpf.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GnWAokeb+9zXqT7xmaKeuntv9NsxMoK3U6BcAVBoFbI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GnWAokeb+9zXqT7xmaKeuntv9NsxMoK3U6BcAVBoFbI="
+        }
+      ]
+    },
+    {
+      "Route": "main.css.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/a9mehw14ac-rexyp90hpf.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qw5E10e75bgu+wYYfDTyHPx4cSTj/0mweIOY/bjMqKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qw5E10e75bgu+wYYfDTyHPx4cSTj/0mweIOY/bjMqKM="
+        }
+      ]
+    },
+    {
+      "Route": "main.rexyp90hpf.css",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/a9mehw14ac-rexyp90hpf.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.005128205128"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qw5E10e75bgu+wYYfDTyHPx4cSTj/0mweIOY/bjMqKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rexyp90hpf"
+        },
+        {
+          "Name": "label",
+          "Value": "main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0="
+        }
+      ]
+    },
+    {
+      "Route": "main.rexyp90hpf.css",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/a9mehw14ac-rexyp90hpf.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.005988023952"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GnWAokeb+9zXqT7xmaKeuntv9NsxMoK3U6BcAVBoFbI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rexyp90hpf"
+        },
+        {
+          "Name": "label",
+          "Value": "main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0="
+        }
+      ]
+    },
+    {
+      "Route": "main.rexyp90hpf.css",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/wwwroot/main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "607"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rexyp90hpf"
+        },
+        {
+          "Name": "label",
+          "Value": "main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-o5qwj3JUpph7s0paXWPtxYQeP7/X7acrF1bKyjitZu0="
+        }
+      ]
+    },
+    {
+      "Route": "main.rexyp90hpf.css.br",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/publish/a9mehw14ac-rexyp90hpf.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GnWAokeb+9zXqT7xmaKeuntv9NsxMoK3U6BcAVBoFbI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rexyp90hpf"
+        },
+        {
+          "Name": "label",
+          "Value": "main.css.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GnWAokeb+9zXqT7xmaKeuntv9NsxMoK3U6BcAVBoFbI="
+        }
+      ]
+    },
+    {
+      "Route": "main.rexyp90hpf.css.gz",
+      "AssetFile": "/Users/supojen/2025/Product/Servers/Auth/src/Auth.Presentation/obj/Release/net9.0/compressed/a9mehw14ac-rexyp90hpf.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "194"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Qw5E10e75bgu+wYYfDTyHPx4cSTj/0mweIOY/bjMqKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 May 2025 16:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rexyp90hpf"
+        },
+        {
+          "Name": "label",
+          "Value": "main.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Qw5E10e75bgu+wYYfDTyHPx4cSTj/0mweIOY/bjMqKM="
+        }
+      ]
+    }
+  ]
+}
