@@ -3,7 +3,6 @@ using System.Security.Claims;
 using System.Text.Json;
 using Auth.Application;
 using Auth.Application.Commands;
-using Auth.Application.Services;
 using Auth.Domain.Repositories;
 using Auth.Infrastructure;
 using Auth.Presentation.Endpoints;

@@ -1,17 +1,21 @@
-[Unit]
-Description=Example .NET Web API App running on Linux
+[Unit]                                                                                                       
+Description=Open Authorization Server
+After=network.target
 
 [Service]
-WorkingDirectory=/opt/backstage/1.0.0/
-ExecStart=/opt/dotnet/9.0.4/dotnet /opt/backstage/1.0.0/Backstage.Presentation.dll
+WorkingDirectory=${WORKING_PATH}
+ExecStart=/opt/dotnet/9.0.4/dotnet ${WORKING_PATH}Auth.Presentation.dll
 Restart=always
-# Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
 KillSignal=SIGINT
-SyslogIdentifier=dotnet-example
-User=api
+SyslogIdentifier=authorization
+User=${SERVICE_USER}
 Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=ASPNETCORE_URLS=${URL}
 
+# 資源限制
+CPUQuota=${CPU_QUOTA}
+MemoryMax=${MEMORY_MAX}
 
 [Install]
 WantedBy=multi-user.target
