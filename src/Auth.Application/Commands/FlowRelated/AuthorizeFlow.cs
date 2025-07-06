@@ -3,7 +3,7 @@ using Auth.Application.Services;
 using Auth.Domain.Repositories;
 using Shared.Mediator.Interface;
 
-namespace Auth.Application.Commands;
+namespace Auth.Application.Commands.FlowRelated;
 
 public class AuthorizeFlow: IRequest<AuthorizeResponse>
 {

@@ -1,6 +1,6 @@
 using System.Security.Claims;
 using Auth.Application.Services;
-using Auth.Infrastructure.Utils;
+using Auth.Infrastructure.Configurations;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 

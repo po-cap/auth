@@ -1,13 +1,13 @@
 using Auth.Application.Services;
 using Auth.Infrastructure.Persistence;
 using Auth.Infrastructure.Services;
-using Auth.Infrastructure.Utils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 using Auth.Domain.Entities;
 using Auth.Domain.Repositories;
+using Auth.Infrastructure.Configurations;
 using Auth.Infrastructure.Repositories;
 
 namespace Auth.Infrastructure;

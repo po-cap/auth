@@ -1,10 +1,9 @@
 using Auth.Application.Services;
-using Auth.Domain.Entities;
 using Auth.Domain.Repositories;
 using Po.Api.Response;
 using Shared.Mediator.Interface;
 
-namespace Auth.Application.Commands;
+namespace Auth.Application.Commands.UserRelated;
 
 public record struct LoginCommand : IRequest
 {

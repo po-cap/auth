@@ -1,4 +1,5 @@
 using Auth.Application.Commands;
+using Auth.Application.Commands.FlowRelated;
 
 namespace Auth.Presentation.Contracts;
 

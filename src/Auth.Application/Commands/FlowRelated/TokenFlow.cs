@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authentication;
 using Po.Api.Response;
 using Shared.Mediator.Interface;
 
-namespace Auth.Application.Commands;
+namespace Auth.Application.Commands.FlowRelated;
 
 public class TokenFlow : IRequest<UserToken>
 {

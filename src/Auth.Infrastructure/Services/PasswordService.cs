@@ -2,7 +2,7 @@ using System.Collections;
 using System.Security.Cryptography;
 using System.Text;
 using Auth.Application.Services;
-using Auth.Infrastructure.Utils;
+using Auth.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace Auth.Infrastructure.Services;

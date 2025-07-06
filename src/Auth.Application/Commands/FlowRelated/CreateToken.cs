@@ -7,7 +7,7 @@ using Auth.Domain.Repositories;
 using Microsoft.AspNetCore.Authentication;
 using Shared.Mediator.Interface;
 
-namespace Auth.Application.Commands;
+namespace Auth.Application.Commands.FlowRelated;
 
 public record struct CreateToken : IRequest<UserToken>
 {

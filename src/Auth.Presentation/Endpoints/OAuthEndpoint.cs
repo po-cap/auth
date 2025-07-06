@@ -1,11 +1,156 @@
 using System.Security.Claims;
 using Auth.Application.Commands;
+using Auth.Application.Commands.FlowRelated;
+using Auth.Application.Commands.UserRelated;
 using Auth.Presentation.Contracts;
 using Microsoft.AspNetCore.Authentication;
 using Po.Api.Response;
 using Shared.Mediator.Interface;
 
 namespace Auth.Presentation.Endpoints;
+
+public static class OAuthRoute
+{
+    public static void MapOAuth(this WebApplication app)
+    {
+        app.MapGet("/oauth/authorize",MapAuthorize);
+        app.MapPost("/oauth/token",MapToken);
+        app.MapGet("/oauth/information",MapInformation).RequireAuthorization("jwt");
+    }
+
+    /// <summary>
+    /// Authorize Endpoint
+    /// </summary>
+    /// <param name="ctx"></param>
+    /// <param name="mediator"></param>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    private static async Task<IResult> MapAuthorize(
+        HttpContext ctx, 
+        IMediator mediator, 
+        [AsParameters] AuthorizationRequest request)
+    {
+        string redirectUrl;
+        // processing - 決定到 callback endpoint
+        try
+        {
+            var command = request.ToCommand();
+            var response = await mediator.SendAsync(command);
+    
+            redirectUrl = new UriBuilder(response.RedirectUrl)
+            {
+                Query = QueryString.Create(
+                    new Dictionary<string, string?>
+                    {
+                        ["code"] = response.Code,
+                        ["state"] = response.State
+                    }).Value
+            }.ToString();
+                
+            await ctx.SignOutAsync("authorize");
+        }
+        // processing - 決定到 login page
+        catch(Exception)
+        {
+            // processing - 取得 Domain Name
+            var domainName = ctx.Request.Host.Value;
+                
+            // processing - 建立 redirect uri，讓使用者 redirect 到 login page
+            redirectUrl = new UriBuilder($"https://{domainName}/oauth/login")
+            {
+                Query = QueryString.Create(
+                    new Dictionary<string, string?>
+                    {
+                        ["redirectUri"] = $"{ctx.Request.Path}{ctx.Request.QueryString}"
+                    }).Value
+            }.ToString();
+        
+            // processing - 建立 cookie，讓 cookie 存 state 資訊
+            await ctx.SignInAsync("authorize", new ClaimsPrincipal(
+                new ClaimsIdentity(new Claim[]
+                {
+                    new("state",request.state)
+                }, "authorize")));
+        }
+
+        // return - 依據狀態決定要 redirect 到 callback endpoint 還是 login page
+        return Results.Redirect(redirectUrl);
+    }
+
+    /// <summary>
+    /// Token Endpoint
+    /// </summary>
+    /// <param name="ctx"></param>
+    /// <param name="mediator"></param>
+    /// <param name="authService"></param>
+    /// <returns></returns>
+    /// <exception cref="Failure"></exception>
+    private static async Task<IResult> MapToken(
+        HttpContext ctx,
+        IMediator mediator,
+        IAuthenticationService authService)
+    {
+        if (ctx.Request.HasFormContentType)
+        {
+            string grantType, 
+                code, 
+                redirectUri, 
+                codeVerifier, 
+                client_id, 
+                client_secret;
+                
+            var form = await ctx.Request.ReadFormAsync();
+            grantType     = form["grant_type"].ToString();
+            code          = form["code"].ToString();
+            redirectUri   = form["redirect_uri"].ToString();
+            codeVerifier  = form["code_verifier"].ToString();
+            client_id     = form["client_id"].ToString();
+            client_secret = form["client_secret"].ToString();
+
+                
+            var token = await mediator.SendAsync(new TokenFlow
+            {
+                GrantType = grantType,
+                Code = code,
+                CodeVerifier = codeVerifier,
+                RedirectUri = redirectUri,
+                ClientId = client_id,
+                ClientSecret = client_secret
+            });
+
+            var authorize = await authService.AuthenticateAsync(ctx, "authorize");
+            if (authorize.Succeeded)
+            {
+                await ctx.SignOutAsync("authorize");
+            }
+                
+            return Results.Ok(token.ToResponse());
+        }
+        else
+        {
+            throw Failure.BadRequest();
+        }
+    }
+
+    /// <summary>
+    /// Information Endpoint
+    /// </summary>
+    /// <param name="ctx"></param>
+    /// <param name="mediator"></param>
+    /// <returns></returns>
+    /// <exception cref="Failure"></exception>
+    private static async Task<IResult> MapInformation(HttpContext ctx, IMediator mediator)
+    {
+        var sub = ctx.User.FindFirstValue("sub");
+        var command = new GetUserInfo()
+        {
+            UserId = sub ?? throw Failure.Unauthorized()
+        };
+        var information = await mediator.SendAsync(command);
+        return Results.Ok(information);
+    }
+}
+
 
 public static class OAuthEndpoint
 {

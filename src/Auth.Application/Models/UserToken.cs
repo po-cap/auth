@@ -2,7 +2,7 @@ namespace Auth.Application.Models;
 
 
 /// <summary>
-/// 回應改使用者的 Token
+/// Token Flow 的 Response
 /// </summary>
 public record struct UserToken
 {

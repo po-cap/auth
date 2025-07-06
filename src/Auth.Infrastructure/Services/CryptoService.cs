@@ -1,7 +1,8 @@
 using System.Security.Cryptography;
 using System.Text;
 using Auth.Application.Services;
-using Auth.Infrastructure.Utils;
+using Auth.Infrastructure.Configurations;
+using Auth.Infrastructure.Extensions;
 
 namespace Auth.Infrastructure.Services;
 

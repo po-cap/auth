@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 
-namespace Auth.Infrastructure.Utils;
+namespace Auth.Infrastructure.Extensions;
 
 /// <summary>
 /// AES-GCM 密文

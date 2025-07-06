@@ -1,73 +1,53 @@
-using Auth.Infrastructure.Utils;
+using Auth.Infrastructure.Configurations;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Auth.Presentation.Endpoints;
 
-public static class WellKnownEndpoint
+public static class WellKnownRoutes
 {
-    public static void MapWellKnownEndpoint(this IEndpointRouteBuilder app)
+    public static void MapWellKnownRoutes(this WebApplication app)
     {
-        // --------------------------------------------------------------------------------
-        // Endpoint- 
-        //     Open ID 得配置
-        // --------------------------------------------------------------------------------
-        app.MapGet("/ouath/.well-known/openid-configuration", (HttpContext ctx,IConfiguration config) =>
-        {
-            // processing - 取得 Domain Name
-            var domainName = ctx.Request.Host.Value;
-    
-            // return - OpenId Configuration
-            return Results.Ok(new
-            {
-                issuer                                = $"https://{domainName}",
-                authorization_endpoint                = $"https://{domainName}/ouath/authorize",
-                token_endpoint                        = $"https://{domainName}/ouath/token",
-                userinfo_endpoint                     = $"https://{domainName}/ouath/information",
-                jwks_uri                              = $"https://{domainName}/oauth/.well-known/jwks",
-                response_types_supported              = new[] { "code" },
-                subject_types_supported               = new[] { "public" },
-                id_token_signing_alg_values_supported = new[] { "RS256" },
-                scopes_supported                      = new[] { "openid" },
-                claims_supported                      = new[] { "sub" },
-                grant_types_supported                 = new[] { "authorization_code", "client_credentials" }                
-            });
-        });
-
-        // --------------------------------------------------------------------------------
-        // Endpoint - 
-        //     Json Web Public Keys
-        // --------------------------------------------------------------------------------
-        app.MapGet("/oauth/.well-known/jwks", (Key key) =>
-        {
-            // loop - 
-            //     建立 Json Web Key List
-            var jwks = new List<JsonWebKey>();
-            foreach (var rsaKey in key.RsaKeys)
-            {
-                // processing - 取得 Rsa key 中 Public Key 的部分
-                var securityKey = new RsaSecurityKey(rsaKey.Public)
-                {
-                    // Key 的 ID
-                    KeyId = rsaKey.ID 
-                };
-        
-                // processing - 建立一個 Json Web Key
-                var jwk = JsonWebKeyConverter.ConvertFromRSASecurityKey(securityKey);
-                jwk.Alg = "RS256";
-                jwk.Use = "sig";
-        
-                // processing - 加入 Json Web Key List
-                jwks.Add(jwk);
-            }
-
-            // return - Json Web Key List
-            return Results.Ok(new
-            {
-                keys = jwks
-            });
-        });
+        app.MapGet("/ouath/.well-known/openid-configuration", Configuration);
+        app.MapGet("/oauth/.well-known/jwks", GetJwks);
     }
-    
-    
-    
+
+    /// <summary>
+    /// 取得 OpenID 配置
+    /// </summary>
+    /// <param name="ctxAccessor"></param>
+    /// <returns></returns>
+    private static Task<IResult> Configuration(IHttpContextAccessor ctxAccessor)
+    {
+        // processing - 取得 Domain Name
+        var domainName = ctxAccessor.HttpContext?.Request.Host.Value;
+
+        // return - OpenId Configuration
+        return Task.FromResult(Results.Ok(new
+        {
+            issuer                                = $"https://{domainName}",
+            authorization_endpoint                = $"https://{domainName}/ouath/authorize",
+            token_endpoint                        = $"https://{domainName}/ouath/token",
+            userinfo_endpoint                     = $"https://{domainName}/ouath/information",
+            jwks_uri                              = $"https://{domainName}/oauth/.well-known/jwks",
+            response_types_supported              = new[] { "code" },
+            subject_types_supported               = new[] { "public" },
+            id_token_signing_alg_values_supported = new[] { "RS256" },
+            scopes_supported                      = new[] { "openid" },
+            claims_supported                      = new[] { "sub" },
+            grant_types_supported                 = new[] { "authorization_code", "client_credentials" }                
+        }));
+    }
+
+    /// <summary>
+    /// 取得 Json Web Keys
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns></returns>
+    private static Task<IResult> GetJwks(Key key)
+    {
+        return Task.FromResult(Results.Ok(new
+        {
+            keys = key.Jwks
+        }));
+    }
 }

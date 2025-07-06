@@ -1,4 +1,5 @@
 using Auth.Application.Commands;
+using Auth.Application.Commands.UserRelated;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Auth.Presentation.Contracts;

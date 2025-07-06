@@ -1,4 +1,4 @@
-namespace Auth.Infrastructure.Utils;
+namespace Auth.Infrastructure.Extensions;
 
 public static class ByteExtension
 {

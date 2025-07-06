@@ -10,7 +10,7 @@ public class OAuthController : Controller
         ViewData["redirectUri"] = redirectUri;
         return View();
     }
-
+    
     public IActionResult Hello()
     {
         return View();

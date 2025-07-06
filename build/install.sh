@@ -40,6 +40,7 @@ KillSignal=SIGINT
 SyslogIdentifier=authorization
 User=${SERVICE_USER}
 Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 Environment=ASPNETCORE_URLS=${URL}
 
 # 資源限制

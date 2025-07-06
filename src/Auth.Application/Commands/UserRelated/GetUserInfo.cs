@@ -1,7 +1,7 @@
 using Auth.Domain.Repositories;
 using Shared.Mediator.Interface;
 
-namespace Auth.Application.Commands;
+namespace Auth.Application.Commands.UserRelated;
 
 
 public record struct UserInfo

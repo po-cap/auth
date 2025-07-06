@@ -1,5 +1,8 @@
 namespace Auth.Application.Models;
 
+/// <summary>
+/// Authorize Endpoint 的 Response
+/// </summary>
 public class Code
 {
     /// <summary>

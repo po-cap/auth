@@ -4,7 +4,6 @@ using System.Text.Json;
 using Auth.Application.Models;
 using Auth.Application.Services;
 using Auth.Infrastructure.Persistence;
-using Auth.Infrastructure.Utils;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.DataProtection;
 using Po.Api.Response;

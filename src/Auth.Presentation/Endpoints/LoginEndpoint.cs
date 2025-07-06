@@ -3,6 +3,8 @@ using System.Security.Claims;
 using System.Text.Json;
 using System.Web;
 using Auth.Application.Commands;
+using Auth.Application.Commands.FlowRelated;
+using Auth.Application.Commands.UserRelated;
 using Auth.Application.Models;
 using Auth.Application.Services;
 using Auth.Presentation.Contracts;
@@ -13,54 +15,47 @@ using Shared.Mediator.Interface;
 namespace Auth.Presentation.Endpoints;
 
 
-public class LineHttpClient
+public static class LoginRoute
 {
-    private readonly HttpClient _httpClient;
-    private readonly IMediator _mediator;
-
-    public LineHttpClient(HttpClient httpClient, IMediator mediator)
+    public static void MapLogin(this WebApplication app)
     {
-        _httpClient = httpClient;
-        _mediator = mediator;
+        app.MapGet("/oauth/line", LineLogin).RequireAuthorization("authorize");
+        app.MapGet("/oauth/login", Login).RequireAuthorization("authorize");
     }
 
-    public async Task<UserToken> AuthorizeAsync(string accessToken)
+    private static Task<IResult> LineLogin(HttpContext ctx,HttpRequest req)
     {
-        var request = new HttpRequestMessage(HttpMethod.Get, "/v2/profile");
-        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-        
-        var response = await _httpClient.SendAsync(request);
+        // processing - 檢查是否有 state claim
+        var state = ctx.User.FindFirstValue("state");
+        if(state == null)
+            throw Failure.BadRequest("request /authorize endpoint first");
 
-        if (response.IsSuccessStatusCode)
-        {
-            // processing - 
-            var user = await response.Content.ReadFromJsonAsync<JsonElement>();
-            var createUserCmd = new CreateUser()
+        // processing - 取得 redirect URI（也就是，如果 Line 認證通過後，在打一次 authorize eendpoint）
+        var uri = HttpUtility.HtmlDecode(req.QueryString.Value?.Substring(13));
+
+        // processing - 進行 Line OAuth 認證
+        return Task.FromResult(Results.Challenge(
+            new AuthenticationProperties
             {
-                UserId = user.GetProperty("userId").ToString(),
-                Avatar = user.GetProperty("pictureUrl").ToString(),
-                DisplayName = user.GetProperty("displayName").ToString(),
-            };
-            await _mediator.SendAsync(createUserCmd);
+                RedirectUri = uri
+            }, new List<string>() { "line" }));
+    }
+    
+    private static async Task<IResult> Login(HttpContext ctx, IMediator mediator, LoginRequest request)
+    {
+        // processing - 檢查是否有 state claim
+        var state = ctx.User.FindFirstValue("state");
+        if(state == null)
+            throw Failure.BadRequest("request /authorize endpoint first");
             
-            // processing - 
-            var createTokenCmd = new CreateToken()
-            {
-                UserId = user.GetProperty("userId").ToString()
-            };
-            var userToken = await _mediator.SendAsync(createTokenCmd);
-
-            // return - 
-            return userToken;
-        }
-        else
-        {
-            throw Failure.Unauthorized();
-        }
+        // processing - 執行登入邏輯
+        await mediator.SendAsync(request.ToCommand(state));
+            
+        // returning -
+        //     TODO: 最正確的 OAuth 流程應該是返回 302，But 一直出問題，等找到答案再回頭改
+        return Results.Ok();
     }
 }
-
-
 
 public static class LoginEndpoint
 {
