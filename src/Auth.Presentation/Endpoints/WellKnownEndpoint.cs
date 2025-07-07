@@ -7,7 +7,7 @@ public static class WellKnownRoutes
 {
     public static void MapWellKnownRoutes(this WebApplication app)
     {
-        app.MapGet("/ouath/.well-known/openid-configuration", Configuration);
+        app.MapGet("/oauth/.well-known/openid-configuration", Configuration);
         app.MapGet("/oauth/.well-known/jwks", GetJwks);
     }
 
@@ -18,7 +18,7 @@ public static class WellKnownRoutes
     /// <returns></returns>
     private static Task<IResult> Configuration(IHttpContextAccessor ctxAccessor)
     {
-        // processing - 取得 Domain Name
+        // processing - 取得 Domain Name 
         var domainName = ctxAccessor.HttpContext?.Request.Host.Value;
 
         // return - OpenId Configuration
