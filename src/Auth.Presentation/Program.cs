@@ -1,9 +1,12 @@
+using System.Net;
 using Auth.Application;
 using Auth.Infrastructure;
 using Auth.Presentation.Endpoints;
 using Auth.Presentation.Extensions;
+using Microsoft.AspNetCore.HttpOverrides;
 using Po.Api.Response;
 using Scalar.AspNetCore;
+using IPNetwork = Microsoft.AspNetCore.HttpOverrides.IPNetwork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +19,6 @@ builder.Configuration
     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
     .AddJsonFile($"appsettings.{env}.json", optional: true, reloadOnChange: true)
     .AddEnvironmentVariables();
-
 
 
 builder.Services.AddHttpContextAccessor();        // 加入 HttpContextAccessor 服務
@@ -45,6 +47,24 @@ var app = builder.Build();
         app.MapOpenApi();
         app.MapScalarApiReference();
     }
+    
+    app.UseForwardedHeaders(new ForwardedHeadersOptions
+    {
+        ForwardedHeaders = ForwardedHeaders.XForwardedFor |  // 处理客户端真实 IP（对应 Nginx 的 X-Forwarded-For）
+                           ForwardedHeaders.XForwardedHost | // 处理原始 Host 头 (对应 Nginx 的 Host)
+                           ForwardedHeaders.XForwardedProto, // 处理原始协议(http/https)(对应 Nginx 的 X-Forwarded-Proto)
+    
+        // 以下两個參數，擇一使用就好
+        // KnownNetworks，設定代理端（Nginx）必須在哪個子網域內
+        // KnownProxies，設定代理端（Nginx）必須在哪個 IP 機器上
+        //KnownNetworks =
+        //{
+        //    new IPNetwork(IPAddress.Parse("192.168.50.0"), 24)
+        //},
+        KnownProxies = { IPAddress.Parse("127.0.0.1") }
+    });    
+    app.UsePathBase("/oauth");  // 表示 Host 還要再加上的路徑，例如這裡會變成 t8.supojen.com/aouth
+    
     app.UseStaticFiles();      // 使用靜態資源(wwwroot directory 裡的資源)
     app.UseRouting();          // 路由匹配(Mini API 的 Map)
     app.UseAuthentication();   // 確認身份

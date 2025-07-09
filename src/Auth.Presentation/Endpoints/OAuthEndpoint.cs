@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using Auth.Application.Commands;
 using Auth.Application.Commands.FlowRelated;
 using Auth.Application.Commands.UserRelated;
 using Auth.Presentation.Contracts;
