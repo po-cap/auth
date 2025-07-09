@@ -63,7 +63,7 @@ var app = builder.Build();
         //},
         KnownProxies = { IPAddress.Parse("127.0.0.1") }
     });    
-    app.UsePathBase("/oauth");  // 表示 Host 還要再加上的路徑，例如這裡會變成 t8.supojen.com/aouth
+    //app.UsePathBase("/oauth");  // 表示 Host 還要再加上的路徑，例如這裡會變成 t8.supojen.com/aouth
     
     app.UseStaticFiles();      // 使用靜態資源(wwwroot directory 裡的資源)
     app.UseRouting();          // 路由匹配(Mini API 的 Map)
