@@ -54,9 +54,10 @@ public static class OAuthRoute
         {
             // processing - 取得 Domain Name
             var domainName = ctx.Request.Host.Value;
+            var domain = Environment.GetEnvironmentVariable("ASPNETCORE_DOMAIN");
                 
             // processing - 建立 redirect uri，讓使用者 redirect 到 login page
-            redirectUrl = new UriBuilder($"https://{domainName}/oauth/login")
+            redirectUrl = new UriBuilder($"https://{domain}/oauth/login")
             {
                 Query = QueryString.Create(
                     new Dictionary<string, string?>
