@@ -122,7 +122,7 @@ public static class AuthenticationExtension
             o.Scope.Add("email");
 
             // Description - 關於 Token Saving 的配置
-            o.CallbackPath = "/auth/line-cb";
+            o.CallbackPath = "/oauth/line-cb";
             o.SaveTokens = true;
             o.Events.OnCreatingTicket = async ctx =>
             {
