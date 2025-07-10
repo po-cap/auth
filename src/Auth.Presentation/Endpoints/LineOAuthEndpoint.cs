@@ -55,7 +55,7 @@ public static class LineOAuthEndpoint
                 
             // processing - 建立 redirect uri，讓使用者 redirect 到 login page
             // TODO: 變更 Redirect URL 到 /oauth/line?redirectUri=@ViewData["redirectUri"] 
-            redirectUrl = new UriBuilder($"https://{domain}/oauth/login")
+            redirectUrl = new UriBuilder($"https://{domain}/oauth/line")
             {
                 Query = QueryString.Create(
                     new Dictionary<string, string?>
