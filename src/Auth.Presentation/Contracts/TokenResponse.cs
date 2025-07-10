@@ -11,7 +11,7 @@ public class TokenResponse
 
     public required string token_type { get; init; }
 
-    public required int expires { get; init; }
+    public required int expires_in { get; init; }
 }
 
 public static partial class ContractExtension
@@ -23,7 +23,7 @@ public static partial class ContractExtension
             access_token = tokenResponse.AccessToken,
             refresh_token = tokenResponse.RefreshToken,
             token_type = tokenResponse.TokenType,
-            expires = tokenResponse.Expires
+            expires_in = tokenResponse.Expires
         };
     }
 }

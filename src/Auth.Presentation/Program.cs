@@ -6,7 +6,6 @@ using Auth.Presentation.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using Po.Api.Response;
 using Scalar.AspNetCore;
-using IPNetwork = Microsoft.AspNetCore.HttpOverrides.IPNetwork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -81,6 +80,7 @@ var app = builder.Build();
     app.MapOAuth();
     //app.MapLogin();
     app.MapLoginEndpoint();
+    app.MapLineOAuth();
 
     app.Run();
 }

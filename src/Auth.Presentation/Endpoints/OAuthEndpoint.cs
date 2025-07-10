@@ -52,6 +52,7 @@ public static class OAuthRoute
         catch(Exception)
         {
             // processing - 取得 Domain Name
+            // TODO: 經過代理之後，UseForwardedHeaders，應該是可以直接用 domain name
             var domainName = ctx.Request.Host.Value;
             var domain = Environment.GetEnvironmentVariable("ASPNETCORE_DOMAIN");
                 
