@@ -30,7 +30,7 @@ public static class LoginRoute
         if(state == null)
             throw Failure.BadRequest("request /authorize endpoint first");
 
-        // processing - 取得 redirect URI（也就是，如果 Line 認證通過後，在打一次 authorize eendpoint）
+        // processing - 取得 redirect URI（也就是，如果 Line 認證通過後，在打一次 authorize endpoint）
         var uri = HttpUtility.HtmlDecode(req.QueryString.Value?.Substring(13));
 
         // processing - 進行 Line OAuth 認證
@@ -72,8 +72,8 @@ public static class LoginEndpoint
             if(state == null)
                 throw Failure.BadRequest("request /authorize endpoint first");
 
-            // processing - 取得 redirect URI（也就是，如果 Line 認證通過後，在打一次 authorize eendpoint）
-            var uri = HttpUtility.HtmlDecode(req.QueryString.Value?.Substring(13));
+            // processing - 取得 redirect URI（也就是，如果 Line 認證通過後，在打一次 authorize endpoint）
+            var uri = Uri.UnescapeDataString(req.QueryString.Value!.Substring(13));
             
             // processing - 進行 Line OAuth 認證
             return Results.Challenge(new AuthenticationProperties

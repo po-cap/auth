@@ -54,7 +54,6 @@ public static class LineOAuthEndpoint
             var domain = Environment.GetEnvironmentVariable("ASPNETCORE_DOMAIN");
                 
             // processing - 建立 redirect uri，讓使用者 redirect 到 login page
-            // TODO: 變更 Redirect URL 到 /oauth/line?redirectUri=@ViewData["redirectUri"] 
             redirectUrl = new UriBuilder($"https://{domain}/oauth/line")
             {
                 Query = QueryString.Create(
