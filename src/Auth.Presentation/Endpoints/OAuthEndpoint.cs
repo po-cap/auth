@@ -94,11 +94,13 @@ public static class OAuthRoute
         if (ctx.Request.HasFormContentType)
         {
             string grantType, 
-                code, 
-                redirectUri, 
-                codeVerifier, 
-                client_id, 
-                client_secret;
+                   code, 
+                   redirectUri, 
+                   codeVerifier, 
+                   client_id, 
+                   client_secret;
+
+            string? refresh_token;
                 
             var form = await ctx.Request.ReadFormAsync();
             grantType     = form["grant_type"].ToString();
@@ -107,7 +109,7 @@ public static class OAuthRoute
             codeVerifier  = form["code_verifier"].ToString();
             client_id     = form["client_id"].ToString();
             client_secret = form["client_secret"].ToString();
-
+            refresh_token = form["refresh_token"].ToString();
                 
             var token = await mediator.SendAsync(new TokenFlow
             {
@@ -116,7 +118,8 @@ public static class OAuthRoute
                 CodeVerifier = codeVerifier,
                 RedirectUri = redirectUri,
                 ClientId = client_id,
-                ClientSecret = client_secret
+                ClientSecret = client_secret,
+                RefreshToken = refresh_token
             });
 
             var authorize = await authService.AuthenticateAsync(ctx, "authorize");
@@ -232,6 +235,8 @@ public static class OAuthEndpoint
                        client_id, 
                        client_secret;
                 
+                string? refresh_token;
+                
                 var form = await ctx.Request.ReadFormAsync();
                 grantType     = form["grant_type"].ToString();
                 code          = form["code"].ToString();
@@ -239,6 +244,7 @@ public static class OAuthEndpoint
                 codeVerifier  = form["code_verifier"].ToString();
                 client_id     = form["client_id"].ToString();
                 client_secret = form["client_secret"].ToString();
+                refresh_token = form["refresh_token"].ToString();
 
                 
                 var token = await mediator.SendAsync(new TokenFlow
@@ -248,7 +254,8 @@ public static class OAuthEndpoint
                     CodeVerifier = codeVerifier,
                     RedirectUri = redirectUri,
                     ClientId = client_id,
-                    ClientSecret = client_secret
+                    ClientSecret = client_secret,
+                    RefreshToken = refresh_token
                 });
 
                 var authorize = await authService.AuthenticateAsync(ctx, "authorize");
