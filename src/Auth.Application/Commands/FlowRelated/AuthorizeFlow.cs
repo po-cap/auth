@@ -1,6 +1,7 @@
 using Auth.Application.Models;
 using Auth.Application.Services;
 using Auth.Domain.Repositories;
+using Po.Api.Response;
 using Shared.Mediator.Interface;
 
 namespace Auth.Application.Commands.FlowRelated;
@@ -64,7 +65,7 @@ public class AuthorizeFlowHandler : IRequestHandler<AuthorizeFlow, AuthorizeResp
 
         if (session is null)
         {
-            throw new Exception();
+            throw Failure.Unauthorized();
         }
         
         // processing - 建立 code

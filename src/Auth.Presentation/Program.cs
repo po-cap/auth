@@ -53,6 +53,7 @@ var app = builder.Build();
                            ForwardedHeaders.XForwardedHost | // 处理原始 Host 头 (对应 Nginx 的 Host)
                            ForwardedHeaders.XForwardedProto, // 处理原始协议(http/https)(对应 Nginx 的 X-Forwarded-Proto)
     
+        ForwardLimit = null,
         // 以下两個參數，擇一使用就好
         // KnownNetworks，設定代理端（Nginx）必須在哪個子網域內
         // KnownProxies，設定代理端（Nginx）必須在哪個 IP 機器上
