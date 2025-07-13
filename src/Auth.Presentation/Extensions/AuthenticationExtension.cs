@@ -4,7 +4,10 @@ using System.Text.Json;
 using Auth.Application.Commands.UserRelated;
 using Auth.Domain.Repositories;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Protocols;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using Shared.Mediator.Interface;
 
@@ -194,7 +197,7 @@ public static class AuthenticationExtension
             //     定義 openid 的 endpoint 
             var domain = Environment.GetEnvironmentVariable("ASPNETCORE_DOMAIN") 
                          ?? throw new Exception("Set \"ASPNETCORE_DOMAIN\"");
-            o.MetadataAddress = $"https://{domain}/ouath/.well-known/openid-configuration";
+            o.Authority = $"https://{domain}/oauth";
             
             // Description - 
             //     定義 Validate 過程中要 validate 哪些資料
@@ -206,6 +209,25 @@ public static class AuthenticationExtension
                 ValidateLifetime = true,
                 ClockSkew = TimeSpan.FromMinutes(5),
                 RequireExpirationTime = true
+            };
+            
+            
+            // 啟用詳細錯誤訊息
+            o.IncludeErrorDetails = true;
+        
+            // 事件處理器用於記錄詳細錯誤
+            o.Events = new JwtBearerEvents
+            {
+                OnAuthenticationFailed = context =>
+                {
+                    Console.WriteLine($"Authentication failed: {context.Exception.Message}");
+                    return Task.CompletedTask;
+                },
+                OnTokenValidated = context =>
+                {
+                    Console.WriteLine("Token validated successfully");
+                    return Task.CompletedTask;
+                }
             };
         });
         

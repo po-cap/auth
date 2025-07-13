@@ -78,7 +78,8 @@ var app = builder.Build();
     
     
     app.MapWellKnownRoutes();
-    app.MapOAuth();
+    //app.MapOAuth();
+    app.MapOAuthEndpoint();
     //app.MapLogin();
     app.MapLoginEndpoint();
     app.MapLineOAuth();

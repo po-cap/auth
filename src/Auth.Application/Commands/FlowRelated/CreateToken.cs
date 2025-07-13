@@ -5,6 +5,7 @@ using Auth.Application.Models;
 using Auth.Application.Services;
 using Auth.Domain.Repositories;
 using Microsoft.AspNetCore.Authentication;
+using Po.Api.Response;
 using Shared.Mediator.Interface;
 
 namespace Auth.Application.Commands.FlowRelated;
@@ -59,13 +60,15 @@ public class CreateTokenHandler : IRequestHandler<CreateToken, UserToken>
         
         // Processing:
         //     建立 Access Token
-        var staff = await _userRepository.GetByIdAsync(request.UserId);
+        var user = await _userRepository.GetByIdAsync(request.UserId);
+        if(user == null)
+            throw Failure.Unauthorized();
         var claims = new List<Claim>()
         {
             new("jti", jti),
-            new("sub", staff.Id)
+            new("sub", user.Id)
         };
-        foreach (var scope in staff.Role.Scopes)
+        foreach (var scope in user.Role.Scopes)
         {
             claims.Add(new("scope", scope.ToString()));
         }

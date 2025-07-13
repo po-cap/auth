@@ -57,7 +57,6 @@ public class TokenFlowHandler : IRequestHandler<TokenFlow,UserToken>
     private readonly ICodeService _oauthService;
     private readonly IAppRepository _appRepository;
     private readonly IUserRepository _userRepository;
-    private readonly IJwtService _jwtService;
     private readonly ICryptoService _cryptoService;
     private readonly ISessionRepository _sessionRepository;
     private readonly IMediator _mediator;
@@ -66,7 +65,6 @@ public class TokenFlowHandler : IRequestHandler<TokenFlow,UserToken>
         ICodeService oauthService, 
         IAppRepository appRepository, 
         IUserRepository userRepository, 
-        IJwtService jwtService, 
         ICryptoService cryptoService, 
         ISessionRepository sessionRepository, 
         IMediator mediator)
@@ -74,7 +72,6 @@ public class TokenFlowHandler : IRequestHandler<TokenFlow,UserToken>
         _oauthService = oauthService;
         _appRepository = appRepository;
         _userRepository = userRepository;
-        _jwtService = jwtService;
         _cryptoService = cryptoService;
         _sessionRepository = sessionRepository;
         _mediator = mediator;
@@ -84,8 +81,8 @@ public class TokenFlowHandler : IRequestHandler<TokenFlow,UserToken>
     {
         var app = await _appRepository.GetAppAsync(request.ClientId);
 
-        if (app.Secret != request.ClientSecret)
-            throw Failure.Unauthorized();
+        //if (app.Secret != request.ClientSecret)
+        //    throw Failure.Unauthorized();
         
         // processing - 
         if (string.IsNullOrEmpty(request.RefreshToken))
@@ -140,37 +137,16 @@ public class TokenFlowHandler : IRequestHandler<TokenFlow,UserToken>
             throw Failure.BadRequest();
         
         // processing - 
-        var staff = await _userRepository.GetByIdAsync(session.Value.UserId);
-        if (staff is null) throw Failure.NotFound();
+        var user = await _userRepository.GetByIdAsync(session.Value.UserId);
+        if (user is null) throw Failure.Unauthorized();
         
         // processing - 
-        var claims = new List<Claim>()
+        var command = new CreateToken()
         {
-            new("sub", staff.Id)
+            UserId = user.Id
         };
-        foreach (var scope in staff.Role.Scopes)
-        {
-            claims.Add(new("scope", scope.ToString()));
-        }
-        var accessToken = _jwtService.JsonWebToken(claims, DateTimeOffset.Now.AddMinutes(300));
-
-        // processing - 
-        var rawRefreshToken = new RefreshToken
-        {
-            UserId = session.Value.UserId,
-            Expired = DateTimeOffset.Now.AddDays(7)
-        };
-        var cipher = _cryptoService.Encrypt(JsonSerializer.Serialize(rawRefreshToken));
-        var refreshToken = Base64UrlTextEncoder.Encode(cipher);
-
-        // returning - 
-        return new UserToken
-        {
-            AccessToken = accessToken,
-            RefreshToken = refreshToken,
-            TokenType = "Bearer",
-            Expires = (int)(rawRefreshToken.Expired - DateTimeOffset.Now).TotalSeconds 
-        };
+        return await _mediator.SendAsync(command);
+        
     }
 
     public Task<UserToken> HandleAsync(TokenFlow request)
@@ -184,64 +160,6 @@ public class TokenFlowHandler : IRequestHandler<TokenFlow,UserToken>
             default:
                 throw Failure.Unauthorized();
         }
-        
-        return AuthorizationCodeFlowAsync(request);
-        //var app     = await _appRepository.GetAppAsync(request.ClientId);
-        //var code    = _oauthService.UnProtectCode(request.Code);
-        //var session = _sessionRepository.GetSession(code.State);
-        //
-        //// processing - 
-        //if (!ValidateCodeVerifier(code, request.CodeVerifier))
-        //    throw Failure.BadRequest();
-        //
-        //// processing - 
-        //if (code.ClientId != request.ClientId)
-        //    throw Failure.BadRequest();
-        //
-        //// processing -
-        //if (app.Secret != request.ClientSecret)
-        //    throw Failure.BadRequest();
-        //
-        ////// processing - 
-        ////var uri = new Uri(request.RedirectUri); ;
-        ////if (!app.CallbackUrls.Contains(uri.ToString())) 
-        ////    throw Failure.BadRequest();
-        //
-        //if(session is null)
-        //    throw Failure.BadRequest();
-        //
-        //// processing - 
-        //var staff = await _userRepository.GetByIdAsync(session.Value.UserId);
-        //if (staff is null) throw Failure.NotFound();
-        //
-        //// processing - 
-        //var claims = new List<Claim>()
-        //{
-        //    new("sub", staff.Id)
-        //};
-        //foreach (var scope in staff.Role.Scopes)
-        //{
-        //    claims.Add(new("scope", scope.ToString()));
-        //}
-        //var accessToken = _jwtService.JsonWebToken(claims, DateTimeOffset.Now.AddMinutes(300));
-        //
-        //// processing - 
-        //var rawRefreshToken = new RefreshToken
-        //{
-        //    UserId = session.Value.UserId,
-        //    Expired = DateTimeOffset.Now.AddDays(7)
-        //};
-        //var cipher = _cryptoService.Encrypt(JsonSerializer.Serialize(rawRefreshToken));
-        //var refreshToken = Base64UrlTextEncoder.Encode(cipher);
-        //
-        //// returning - 
-        //return new UserToken
-        //{
-        //    AccessToken = accessToken,
-        //    RefreshToken = refreshToken,
-        //    TokenType = "Bearer",
-        //    Expires = (int)(rawRefreshToken.Expired - DateTimeOffset.Now).TotalSeconds 
-        //};
     }
 
 

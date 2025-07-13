@@ -91,16 +91,16 @@ public class Key
                     // Key 的 ID
                     KeyId = rsaKey.ID 
                 };
-        
+                
                 // processing - 建立一個 Json Web Key
                 var jwk = JsonWebKeyConverter.ConvertFromRSASecurityKey(securityKey);
                 jwk.Alg = "RS256";
                 jwk.Use = "sig";
-        
+                
                 // processing - 加入 Json Web Key List
                 jwks.Add(jwk);
             }
-
+            
             return jwks;    
         }
     }
