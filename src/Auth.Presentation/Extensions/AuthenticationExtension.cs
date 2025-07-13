@@ -194,7 +194,7 @@ public static class AuthenticationExtension
             //     定義 openid 的 endpoint 
             var domain = Environment.GetEnvironmentVariable("ASPNETCORE_DOMAIN") 
                          ?? throw new Exception("Set \"ASPNETCORE_DOMAIN\"");
-            o.MetadataAddress = $"{domain}/ouath/.well-known/openid-configuration";
+            o.MetadataAddress = $"https://{domain}/ouath/.well-known/openid-configuration";
             
             // Description - 
             //     定義 Validate 過程中要 validate 哪些資料
