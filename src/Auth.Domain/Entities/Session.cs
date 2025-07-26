@@ -12,5 +12,5 @@ public record struct Session
     /// <summary>
     /// 使用者 ID，在登入成功後，要建立一個 session，把使用者ID和State映射起來
     /// </summary>
-    public required string UserId { get; init; }
+    public required string oidcId { get; init; }
 }

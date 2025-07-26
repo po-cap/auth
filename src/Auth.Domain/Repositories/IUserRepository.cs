@@ -22,7 +22,14 @@ public interface IUserRepository
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    Task<User?> GetByIdAsync(string id);
+    Task<User?> GetByIdAsync(long id);
+
+    /// <summary>
+    /// 取得 “使用者” By OIDC ID
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    Task<User?> GetByOIDCIdAsync(string id);
 
     /// <summary>
     /// 取得 ”工作人員“ By Email

@@ -6,9 +6,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 using Auth.Domain.Entities;
+using Auth.Domain.Factories;
 using Auth.Domain.Repositories;
 using Auth.Infrastructure.Configurations;
+using Auth.Infrastructure.Factories;
 using Auth.Infrastructure.Repositories;
+using Npgsql.Internal.Postgres;
 
 namespace Auth.Infrastructure;
 
@@ -37,6 +40,7 @@ public static class DependencyInjection
             opts.UseNpgsql(configuration.GetConnectionString("Main"), o =>
             {
                 o.MapEnum<Scope>("scope");
+                o.MapEnum<OIDC>("oidc");
             });
         });
         
@@ -52,6 +56,14 @@ public static class DependencyInjection
         
         // Processing - 
         services.AddScoped<IPasswordService, PasswordService>();
+        
+        // description - snowflake id
+        services.AddSingleton<SnowflakeID>(provider => 
+            new SnowflakeID(workerId: 1, datacenterId: 1)
+        );
+        
+        // factories 
+        services.AddScoped<IUserFactory, UserFactory>();
         
         return services;
     }

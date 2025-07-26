@@ -1,4 +1,5 @@
 using Auth.Application.Services;
+using Auth.Domain.Entities;
 using Auth.Domain.Factories;
 using Auth.Domain.Repositories;
 using Shared.Mediator.Interface;
@@ -10,8 +11,13 @@ public record struct CreateUser : IRequest
     /// <summary>
     /// 使用者 ID
     /// </summary>
-    public string UserId { get; init; }
+    public string OIDCId { get; init; }
 
+    /// <summary>
+    /// 身份認證伺服器
+    /// </summary>
+    public OIDC OIDC { get; set; }
+    
     /// <summary>
     /// 頭像
     /// </summary>
@@ -46,16 +52,12 @@ public class CreateUserHandler : IRequestHandler<CreateUser>
 
     public async Task HandleAsync(CreateUser request)
     {
-        var exist = await _userRepository.ExistAsync(request.UserId);
-
-        if (!exist)
-        {
-            var user = await _userFactory.NewAsync(
-                request.UserId, 
-                request.Avatar, 
-                request.DisplayName);
-            _userRepository.Add(user);
-            await _unitOfWork.SaveChangeAsync();
-        }
+        var user = await _userFactory.NewAsync(
+            oidc: request.OIDC,
+            oidcId: request.OIDCId, 
+            avatar: request.Avatar, 
+            displayName: request.DisplayName);
+        _userRepository.Add(user);
+        await _unitOfWork.SaveChangeAsync();
     }
 }

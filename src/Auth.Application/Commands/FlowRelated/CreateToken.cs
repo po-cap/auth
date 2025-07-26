@@ -15,7 +15,7 @@ public record struct CreateToken : IRequest<UserToken>
     /// <summary>
     /// User ID
     /// </summary>
-    public string UserId { get; init; }
+    public long UserId { get; init; }
 
     /// <summary>
     /// 認證身份過程用到的 State
@@ -66,7 +66,7 @@ public class CreateTokenHandler : IRequestHandler<CreateToken, UserToken>
         var claims = new List<Claim>()
         {
             new("jti", jti),
-            new("sub", user.Id)
+            new("sub", $"{user.Id}")
         };
         foreach (var scope in user.Role.Scopes)
         {

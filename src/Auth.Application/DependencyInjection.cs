@@ -1,7 +1,3 @@
-using Auth.Application.Commands;
-using Auth.Application.Factories;
-using Auth.Application.Services;
-using Auth.Domain.Factories;
 using Microsoft.Extensions.DependencyInjection;
 using Shared.Mediator;
 
@@ -13,10 +9,6 @@ public static class DependencyInjection
     {
         // processing - 
         services.AddMediator();
-        
-        // processing - 
-        services.AddScoped<IUserFactory, UserFactory>();
-        
         
         return services;
     }

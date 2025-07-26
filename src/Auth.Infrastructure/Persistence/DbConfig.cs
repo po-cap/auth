@@ -22,6 +22,8 @@ public class DbConfig :
     {
         builder.ToTable("users").HasKey(x => x.Id);
         builder.Property(x => x.Id).HasColumnName("id");
+        builder.Property(x => x.OIDC).HasColumnName("oidc");
+        builder.Property(x => x.OIDCId).HasColumnName("oidc_id");
         builder.Property(x => x.Avatar).HasColumnName("avatar");
         builder.Property(x => x.DisplayName).HasColumnName("display_name");    
         builder.Property(x => x.Password).HasColumnName("password");

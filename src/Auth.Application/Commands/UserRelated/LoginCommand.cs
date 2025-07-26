@@ -45,15 +45,18 @@ public class LoginHandler : IRequestHandler<LoginCommand>
 
     public async Task HandleAsync(LoginCommand request)
     {
-        var staff = await _userRepository.GetByEmailAsync(request.Email);
+        var user = await _userRepository.GetByEmailAsync(request.Email);
+        
+        if(user == null)
+            throw Failure.BadRequest();
 
         var valid = _passwordService.Validate(
             password: request.Password,
-            cipherText: staff.Password ?? throw Failure.BadRequest("User has not password"));
+            cipherText: user.Password ?? throw Failure.BadRequest("User has not password"));
         
         if(!valid)
             throw Failure.BadRequest("Wrong Password");
 
-        _sessionRepository.SetSession(state: request.State, userId: staff.Id);
+        _sessionRepository.SetSession(state: request.State, oidcId: user.OIDCId);
     }
 }

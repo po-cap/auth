@@ -5,8 +5,18 @@ public class User
     /// <summary>
     /// ID
     /// </summary>
-    public string Id { get; init; }
+    public long Id { get; init; }
 
+    /// <summary>
+    /// 哪一家身份認證伺服器
+    /// </summary>
+    public OIDC OIDC { get; set; }
+
+    /// <summary>
+    /// OIDC ID
+    /// </summary>
+    public string OIDCId { get; set; }
+    
     /// <summary>
     /// 頭像
     /// </summary>

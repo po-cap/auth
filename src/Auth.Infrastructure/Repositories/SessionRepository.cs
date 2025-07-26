@@ -1,4 +1,3 @@
-using System.Security.Cryptography;
 using Auth.Domain.Entities;
 using Auth.Domain.Repositories;
 using Auth.Infrastructure.Persistence;
@@ -20,13 +19,13 @@ public class SessionRepository : ISessionRepository
     /// 設定 Code Session
     /// </summary>
     /// <param name="state"></param>
-    /// <param name="userId"></param>
-    public Session SetSession(string state, string userId)
+    /// <param name="oidcId"></param>
+    public Session SetSession(string state, string oidcId)
     {
         // processing - 
         _redisDb.HashSet($"oauth:{state}", new HashEntry[]
         {
-            new ("user_id",userId),
+            new ("oidc_id",oidcId),
         });
 
         // processing - 
@@ -36,7 +35,7 @@ public class SessionRepository : ISessionRepository
         return new Session
         {
             State = state,
-            UserId = userId
+            oidcId = oidcId
         };
     }
     
@@ -47,14 +46,14 @@ public class SessionRepository : ISessionRepository
     /// <returns></returns>
     public Session? GetSession(string state)
     {
-        var userId = _redisDb.HashGet($"oauth:{state}", "user_id");
+        var oidcId = _redisDb.HashGet($"oauth:{state}", "oidc_id");
 
-        if (userId.IsNull) return null;
+        if (oidcId.IsNull) return null;
         
         return new Session()
         {
             State = state,
-            UserId = userId.ToString()
+            oidcId = oidcId
         };
     }
 }

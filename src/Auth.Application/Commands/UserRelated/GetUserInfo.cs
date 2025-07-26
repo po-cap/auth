@@ -1,4 +1,5 @@
 using Auth.Domain.Repositories;
+using Po.Api.Response;
 using Shared.Mediator.Interface;
 
 namespace Auth.Application.Commands.UserRelated;
@@ -23,7 +24,7 @@ public record struct GetUserInfo : IRequest<UserInfo>
     /// <summary>
     /// 使用者 ID
     /// </summary>
-    public string UserId { get; init; }
+    public long UserId { get; init; }
 }
 
 public class GetUserInfoHandler : IRequestHandler<GetUserInfo, UserInfo>
@@ -38,7 +39,10 @@ public class GetUserInfoHandler : IRequestHandler<GetUserInfo, UserInfo>
     public async Task<UserInfo> HandleAsync(GetUserInfo request)
     {
         var user = await _userRepository.GetByIdAsync(request.UserId);
-
+        
+        if(user == null)
+            throw Failure.Unauthorized();
+            
         return new UserInfo()
         {
             Avatar = user.Avatar,

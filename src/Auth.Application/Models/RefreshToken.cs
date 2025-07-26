@@ -5,7 +5,7 @@ public record struct RefreshToken
     /// <summary>
     /// 使用者 ID
     /// </summary>
-    public required string UserId { get; init; }
+    public required long UserId { get; init; }
 
     /// <summary>
     /// 過期時間

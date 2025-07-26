@@ -8,8 +8,8 @@ public interface ISessionRepository
     /// 設定 Code Session
     /// </summary>
     /// <param name="state"></param>
-    /// <param name="userId"></param>
-    Session SetSession(string state, string userId);
+    /// <param name="oidcId"></param>
+    Session SetSession(string state, string oidcId);
 
     /// <summary>
     /// 從 Session

@@ -3,12 +3,17 @@ namespace Auth.Domain.Entities;
 public enum OIDC
 {
     /// <summary>
-    /// Our OIDC
+    /// Xiao Hong Mao
     /// </summary>
-    self,
+    xiao_hong_mao,
     
     /// <summary>
-    /// Line OIDC
+    /// Line 
     /// </summary>
     line,
+    
+    /// <summary>
+    /// We Chat
+    /// </summary>
+    wechat,
 }

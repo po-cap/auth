@@ -39,11 +39,23 @@ public class UserRepository : IUserRepository
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public async Task<User?> GetByIdAsync(string id)
+    public async Task<User?> GetByIdAsync(long id)
     {
         return await _dbContext.Staffs
             .Include(x => x.Role)
             .FirstOrDefaultAsync(x => x.Id == id);
+    }
+
+    /// <summary>
+    /// 取得 “使用者” By OIDC ID
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public async Task<User?> GetByOIDCIdAsync(string id)
+    {
+        return await _dbContext.Staffs
+            .Include(x => x.Role)
+            .FirstOrDefaultAsync(x => x.OIDCId == id);
     }
 
     /// <summary>

@@ -137,7 +137,7 @@ public class TokenFlowHandler : IRequestHandler<TokenFlow,UserToken>
             throw Failure.BadRequest();
         
         // processing - 
-        var user = await _userRepository.GetByIdAsync(session.Value.UserId);
+        var user = await _userRepository.GetByOIDCIdAsync(session.Value.oidcId);
         if (user is null) throw Failure.Unauthorized();
         
         // processing - 

@@ -9,7 +9,7 @@ public record struct SetPasswordCommand : IRequest
     /// <summary>
     /// User ID
     /// </summary>
-    public string UserId { get; set; }
+    public long UserId { get; set; }
 
     /// <summary>
     /// 密碼

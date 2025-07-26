@@ -2,12 +2,11 @@ using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text.Json;
 using Auth.Application.Commands.UserRelated;
+using Auth.Domain.Entities;
 using Auth.Domain.Repositories;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.IdentityModel.Protocols;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using Shared.Mediator.Interface;
 
@@ -144,15 +143,16 @@ public static class AuthenticationExtension
                     if (res.IsSuccessStatusCode)
                     {
                         var user = await res.Content.ReadFromJsonAsync<JsonElement>();
-                        var id = user.GetProperty("userId").GetString();
+                        var oidcId = user.GetProperty("userId").GetString();
 
                         var userRepo = ctx.HttpContext.RequestServices.GetService<IUserRepository>();
-                        var userInRepo = await userRepo!.GetByIdAsync(id!);
+                        var userInRepo = await userRepo!.GetByOIDCIdAsync(oidcId!);
                         if (userInRepo is null)
                         {
                             var command = new CreateUser()
                             {
-                                UserId = user.GetProperty("userId").GetString() ?? "",
+                                OIDC = OIDC.line,
+                                OIDCId = user.GetProperty("userId").GetString() ?? "",
                                 Avatar = user.GetProperty("pictureUrl").GetString() ?? "",
                                 DisplayName = user.GetProperty("displayName").GetString() ?? "",
                             };
@@ -162,7 +162,7 @@ public static class AuthenticationExtension
                         }
 
                         var sessionRepo = ctx.HttpContext.RequestServices.GetService<ISessionRepository>();
-                        sessionRepo?.SetSession(state: state!, userId: id!);
+                        sessionRepo?.SetSession(state: state!, oidcId: oidcId!);
                     }
                     else
                     {
@@ -212,23 +212,10 @@ public static class AuthenticationExtension
             };
             
             
-            // 啟用詳細錯誤訊息
+            // TODO: 正式上產品時關掉
+            // 啟用詳細錯誤訊息(Debug 用)
             o.IncludeErrorDetails = true;
-        
-            // 事件處理器用於記錄詳細錯誤
-            o.Events = new JwtBearerEvents
-            {
-                OnAuthenticationFailed = context =>
-                {
-                    Console.WriteLine($"Authentication failed: {context.Exception.Message}");
-                    return Task.CompletedTask;
-                },
-                OnTokenValidated = context =>
-                {
-                    Console.WriteLine("Token validated successfully");
-                    return Task.CompletedTask;
-                }
-            };
+            
         });
         
         return builder;

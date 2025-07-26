@@ -146,9 +146,15 @@ public static class OAuthRoute
     private static async Task<IResult> MapInformation(HttpContext ctx, IMediator mediator)
     {
         var sub = ctx.User.FindFirstValue("sub");
+        if(sub == null)
+            throw Failure.Unauthorized();
+
+        if (!long.TryParse(sub, out long id))
+            throw Failure.Unauthorized();
+        
         var command = new GetUserInfo()
         {
-            UserId = sub ?? throw Failure.Unauthorized()
+            UserId = id
         };
         var information = await mediator.SendAsync(command);
         return Results.Ok(information);
@@ -281,9 +287,15 @@ public static class OAuthEndpoint
             IMediator mediator) =>
         {
             var sub = ctx.User.FindFirstValue("sub");
+            if(sub == null)
+                throw Failure.Unauthorized();
+
+            if (!long.TryParse(sub, out long id))
+                throw Failure.Unauthorized();
+        
             var command = new GetUserInfo()
             {
-                UserId = sub ?? throw Failure.Unauthorized()
+                UserId = id
             };
             var information = await mediator.SendAsync(command);
             return information;
