@@ -8,6 +8,11 @@ namespace Auth.Application.Commands.UserRelated;
 public record struct UserInfo
 {
     /// <summary>
+    /// 使用者 - ID
+    /// </summary>
+    public required long Id { get; set; }
+    
+    /// <summary>
     /// 使用者 - 頭像
     /// </summary>
     public required string Avatar { get; set; }
@@ -45,6 +50,7 @@ public class GetUserInfoHandler : IRequestHandler<GetUserInfo, UserInfo>
             
         return new UserInfo()
         {
+            Id = user.Id,
             Avatar = user.Avatar,
             DisplayName = user.DisplayName
         };

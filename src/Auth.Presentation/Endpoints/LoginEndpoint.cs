@@ -1,12 +1,5 @@
-using System.Net.Http.Headers;
 using System.Security.Claims;
-using System.Text.Json;
 using System.Web;
-using Auth.Application.Commands;
-using Auth.Application.Commands.FlowRelated;
-using Auth.Application.Commands.UserRelated;
-using Auth.Application.Models;
-using Auth.Application.Services;
 using Auth.Presentation.Contracts;
 using Microsoft.AspNetCore.Authentication;
 using Po.Api.Response;
