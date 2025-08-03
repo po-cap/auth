@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Text.Json;
@@ -7,6 +8,7 @@ using Auth.Domain.Repositories;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Shared.Mediator.Interface;
 
@@ -216,6 +218,32 @@ public static class AuthenticationExtension
             // 啟用詳細錯誤訊息(Debug 用)
             o.IncludeErrorDetails = true;
             
+            
+            // 事件處理器用於記錄詳細錯誤
+            o.Events = new JwtBearerEvents
+            {
+                // 當認證失敗時
+                OnChallenge = async context =>
+                {
+                    context.HandleResponse();
+        
+                    var problemDetails = new ProblemDetails
+                    {
+                        Status = StatusCodes.Status401Unauthorized,
+                        Title = "Unauthorized",
+                        Detail = context.ErrorDescription ?? "无效的认证令牌",
+                        Instance = context.Request.Path
+                    };
+                
+                    var traceId = Activity.Current?.Id ?? context.HttpContext.TraceIdentifier;
+                    problemDetails.Extensions["traceId"] = traceId;
+        
+                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    context.Response.ContentType = "application/problem+json";
+        
+                    await context.Response.WriteAsync(JsonSerializer.Serialize(problemDetails));
+                },
+            };
         });
         
         return builder;
