@@ -25,6 +25,7 @@ public class DbConfig :
         builder.Property(x => x.OIDC).HasColumnName("oidc");
         builder.Property(x => x.OIDCId).HasColumnName("oidc_id");
         builder.Property(x => x.Avatar).HasColumnName("avatar");
+        builder.Property(x => x.Banner).HasColumnName("banner");
         builder.Property(x => x.DisplayName).HasColumnName("display_name");    
         builder.Property(x => x.Password).HasColumnName("password");
         builder.Property(x => x.Email).HasColumnName("email");

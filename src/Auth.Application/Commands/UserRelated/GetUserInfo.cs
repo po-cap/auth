@@ -21,6 +21,11 @@ public record struct UserInfo
     /// 使用者 - 顯示名稱
     /// </summary>
     public required string DisplayName { get; set; }
+
+    /// <summary>
+    /// 使用者橫幅
+    /// </summary>
+    public string? Banner { get; set; }
 }
 
 
@@ -52,7 +57,8 @@ public class GetUserInfoHandler : IRequestHandler<GetUserInfo, UserInfo>
         {
             Id = user.Id,
             Avatar = user.Avatar,
-            DisplayName = user.DisplayName
+            DisplayName = user.DisplayName,
+            Banner = user.Banner
         };
     }
 }

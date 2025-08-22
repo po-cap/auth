@@ -23,6 +23,11 @@ public class User
     public string Avatar { get; set; }
 
     /// <summary>
+    /// 橫福
+    /// </summary>
+    public string Banner { get; set; }
+
+    /// <summary>
     /// 使用者名稱
     /// </summary>
     public string DisplayName { get; set; }
