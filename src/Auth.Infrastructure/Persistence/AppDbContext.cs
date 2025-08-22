@@ -15,7 +15,7 @@ public class AppDbContext : DbContext
     /// <summary>
     /// 後台人員
     /// </summary>
-    public DbSet<User> Staffs { get; set; }
+    public DbSet<User> Users { get; set; }
 
     /// <summary>
     /// 可以訪問資源的 Applications( backend servers)

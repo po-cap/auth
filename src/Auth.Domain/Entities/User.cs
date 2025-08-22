@@ -25,7 +25,7 @@ public class User
     /// <summary>
     /// 橫福
     /// </summary>
-    public string Banner { get; set; }
+    public string? Banner { get; set; }
 
     /// <summary>
     /// 使用者名稱

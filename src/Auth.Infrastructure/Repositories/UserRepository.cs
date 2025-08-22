@@ -22,7 +22,7 @@ public class UserRepository : IUserRepository
     /// <returns></returns>
     public async Task<bool> ExistAsync(string id)
     {
-        return await _dbContext.Staffs.FindAsync(id) != null;
+        return await _dbContext.Users.FindAsync(id) != null;
     }
 
     /// <summary>
@@ -31,7 +31,7 @@ public class UserRepository : IUserRepository
     /// <param name="staff"></param>
     public void Add(User user)
     {
-        _dbContext.Staffs.Add(user);
+        _dbContext.Users.Add(user);
     }
 
     /// <summary>
@@ -41,7 +41,7 @@ public class UserRepository : IUserRepository
     /// <returns></returns>
     public async Task<User?> GetByIdAsync(long id)
     {
-        return await _dbContext.Staffs
+        return await _dbContext.Users
             .Include(x => x.Role)
             .FirstOrDefaultAsync(x => x.Id == id);
     }
@@ -53,7 +53,7 @@ public class UserRepository : IUserRepository
     /// <returns></returns>
     public async Task<User?> GetByOIDCIdAsync(string id)
     {
-        return await _dbContext.Staffs
+        return await _dbContext.Users
             .Include(x => x.Role)
             .FirstOrDefaultAsync(x => x.OIDCId == id);
     }
@@ -64,7 +64,7 @@ public class UserRepository : IUserRepository
     /// <returns></returns>
     public async Task<User> GetByEmailAsync(string email)
     {
-        return await _dbContext.Staffs
+        return await _dbContext.Users
             .Include(x => x.Role)
             .FirstOrDefaultAsync(x => x.Email == email) ?? throw Failure.NotFound();
     }
